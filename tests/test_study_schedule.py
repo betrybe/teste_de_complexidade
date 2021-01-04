@@ -37,15 +37,15 @@ def test_validar_target_time_com_vazio():
 
 
 def test_validar_tempo_busca():
-    expect = ("from challenges.challenge_study_schedule"
+    expect = ("from challenges.challenge_study_schedule "
               "import study_schedule")
     start_time = [2, 1, 2, 1, 4, 4]
     end_time = [2, 2, 3, 5, 5, 5]
     print("printou o tempo de busca")
     print(timeit.timeit(f'study_schedule({start_time}, {end_time}, 5)',
-                        setup=expect))
+                        setup=f"{expect}"))
     print("printou o tempo de busca")
     print("printou o tempo de busca com varias execucoes")
     print(timeit.timeit(f'study_schedule({start_time}, {end_time}, 5)',
-                        setup=expect, number=10000000))
+                        setup=f"{expect}", number=10000000))
     print("printou o tempo de busca com varias execucoes")

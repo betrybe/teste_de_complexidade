@@ -22,14 +22,13 @@ def test_validar_se_nao_passar_palavra_iterativa_retorna_false():
 
 
 def test_validar_tempo_iterative():
-    expect = ("challenges.challenge_palindromes_iterative"
+    expect = ("from challenges.challenge_palindromes_iterative "
               "import is_palindrome_iterative")
-    word = "ANA"
     print("printou o tempo de iterative")
-    print(timeit.timeit(f'is_palindrome_iterative({word})',
-                        setup=expect))
+    print(timeit.timeit(f'is_palindrome_iterative("ANA")',
+                        setup=f"{expect}"))
     print("printou o tempo de iterative")
     print("printou o tempo de iterative com varias execucoes")
-    print(timeit.timeit(f'is_palindrome_iterative({word})',
-                        setup=expect, number=10000000))
+    print(timeit.timeit(f'is_palindrome_iterative("ANA")',
+                        setup=f"{expect}", number=10000000))
     print("printou o tempo de iterative com varias execucoes")

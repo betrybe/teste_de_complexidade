@@ -1,0 +1,104 @@
+{
+  "requirements": [
+    {
+      "identifier": "test_validar_melhor_horario_com_sucesso",
+      "description": "Será validado se é possível visualizar melhor horário para disponibilizar conteúdo",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_melhor_horario_quando_target_empata_com_maior_saida",
+      "description": "Será validado se é possível visualizar melhor horário quando mais de um `target_time` empata com a maior saída",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_start_time_com_valor_vazio",
+      "description": "Será validado que `start_time` com valor vazio retorna 0",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_target_time_com_vazio",
+      "description": "Será validado que `target_time` com valor vazio retorna 0",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_a_palavra_e_um_palindromo_retorna_true",
+      "description": "Será validado que a funcão retorna se a palavra um palíndromo com sucesso",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_a_palavra_nao_e_um_palindromo_retorna_false",
+      "description": "Será validado que a funcão retorna se é a palavra não é um palíndromo com sucesso",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_nao_passar_palavra_retorna_false",
+      "description": "Será validado que a funcão retorna false quando não é enviado a palavra",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_as_palavras_sao_um_anagrama",
+      "description": "Será validado se as palavras são um anagrama",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_as_palavras_nao_sao_um_anagrama",
+      "description": "Será validado se as palavras não são um anagrama",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_passar_primeira_palavra_em_branco_retorna_false",
+      "description": "Será validado se passar a primeira palavra em branco o retorno da função e false",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_passar_segunda_palavra_em_branco_retorna_false",
+      "description": "Será validado se passar a segunda palavra em branco o retorno da função e false",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_encontra_numeros_repetidos",
+      "description": "Será validado que encontra os números repetidos",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_nao_envia_valores",
+      "description": "Será validado se retorna false quando não enviar valores",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_envia_string",
+      "description": "Será validado se retorna false quando envia string",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_nao_ha_repeticao",
+      "description": "Será validado se retorna false quando não há repetição",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_passa_um_numero",
+      "description": "Será validado se retorna false quando passa um número",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_passa_numero_negativo",
+      "description": "Será validado se retorna false quando passa número negativo",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_a_palavra_e_um_palindromo_iterativo_retorna_true",
+      "description": "Será validado que se a palavra é um palindromo interativa retorna true",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_a_palavra_nao_e_um_palindromo_iterativo_retorna_false",
+      "description": "Será validado se a palavra não é um palindromo iterativa irá retornar false",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_nao_passar_palavra_iterativa_retorna_false",
+      "description": "Será validado se não passar uma palavra iterativa irá retornar false",
+      "bonus": true
+    }
+  ]
+}

@@ -32,7 +32,7 @@ def test_validar_tempo_iterative():
     print("printou o tempo de iterative")
     print("printou o tempo de iterative com varias execucoes")
     print(timeit.timeit('is_palindrome_iterative("ANA")',
-                        setup=f"{expect}", number=10000000))
+                        setup=f"{expect}", number=10000))
     print(timeit.repeat('is_palindrome_iterative("ANA")',
-                        setup=f"{expect}", number=10000000, repeat=5))
+                        setup=f"{expect}", number=10000, repeat=5))
     print("printou o tempo de iterative com varias execucoes")

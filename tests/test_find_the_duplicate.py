@@ -48,11 +48,11 @@ def test_validar_tempo_duplicate():
     print(timeit.timeit(f'find_duplicate({nums})',
                         setup=f"{expect}"))
     print(timeit.repeat(f'find_duplicate({nums})',
-                        setup=f"{expect}",repeat=5))
+                        setup=f"{expect}", repeat=5))
     print("printou o tempo de duplicate")
     print("printou o tempo de duplicate com varias execucoes")
     print(timeit.timeit(f'find_duplicate({nums})',
                         setup=f"{expect}", number=10000000))
     print(timeit.repeat(f'find_duplicate({nums})',
-                        setup=f"{expect}", number=10000000,repeat=5))
+                        setup=f"{expect}", number=10000000, repeat=5))
     print("printou o tempo de duplicate com varias execucoes")

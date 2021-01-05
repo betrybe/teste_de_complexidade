@@ -43,4 +43,3 @@ def test_validar_tempo_duplicate():
     print("printou o tempo de duplicate")
     assert timeit.timeit(f'find_duplicate({nums})',
                          setup=f"{expect}", number=10000) <= 0.01
-

@@ -25,14 +25,5 @@ def test_validar_tempo_iterative():
     expect = ("from challenges.challenge_palindromes_iterative "
               "import is_palindrome_iterative")
     print("printou o tempo de iterative")
-    print(timeit.timeit('is_palindrome_iterative("ANA")',
-                        setup=f"{expect}"))
-    print(timeit.repeat('is_palindrome_iterative("ANA")',
-                        setup=f"{expect}", repeat=5))
-    print("printou o tempo de iterative")
-    print("printou o tempo de iterative com varias execucoes")
-    print(timeit.timeit('is_palindrome_iterative("ANA")',
-                        setup=f"{expect}", number=10000))
-    print(timeit.repeat('is_palindrome_iterative("ANA")',
-                        setup=f"{expect}", number=10000, repeat=5))
-    print("printou o tempo de iterative com varias execucoes")
+    assert timeit.timeit('is_palindrome_iterative("ANA")',
+                         setup=f"{expect}", number=10000) <= 0.005

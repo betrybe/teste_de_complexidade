@@ -42,14 +42,5 @@ def test_validar_tempo_busca():
     start_time = [2, 1, 2, 1, 4, 4]
     end_time = [2, 2, 3, 5, 5, 5]
     print("printou o tempo de busca")
-    print(timeit.timeit(f'study_schedule({start_time}, {end_time}, 5)',
-                        setup=f"{expect}"))
-    print(timeit.repeat(f'study_schedule({start_time}, {end_time}, 5)',
-                        setup=f"{expect}", repeat=5))
-    print("printou o tempo de busca")
-    print("printou o tempo de busca com varias execucoes")
-    print(timeit.timeit(f'study_schedule({start_time}, {end_time}, 5)',
-                        setup=f"{expect}", number=10000))
-    print(timeit.repeat(f'study_schedule({start_time}, {end_time}, 5)',
-                        setup=f"{expect}", number=10000, repeat=5))
-    print("printou o tempo de busca com varias execucoes")
+    assert timeit.timeit(f'study_schedule({start_time}, {end_time}, 5)',
+                         setup=f"{expect}", number=10000) <= 0.02

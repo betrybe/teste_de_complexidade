@@ -25,13 +25,13 @@ def test_validar_tempo_palindromo():
     expect = ("from challenges.challenge_palindromes_recursive "
               "import is_palindrome_recursive")
     print("printou o tempo de palindromo")
-    print(timeit.timeit(f'is_palindrome_recursive("ANA", 0, len("ANA") - 1)',
+    print(timeit.timeit('is_palindrome_recursive("ANA", 0, len("ANA") - 1)',
                         setup=f"{expect}"))
     print(timeit.repeat(f'is_palindrome_recursive("ANA", 0, len("ANA") - 1)',
                         setup=f"{expect}",repeat=5))
     print("printou o tempo de palindromo")
     print("printou o tempo de palindromo com varias execucoes")
-    print(timeit.timeit(f'is_palindrome_recursive("ANA", 0, len("ANA") - 1)',
+    print(timeit.timeit('is_palindrome_recursive("ANA", 0, len("ANA") - 1)',
                         setup=f"{expect}", number=10000000))
     print(timeit.repeat(f'is_palindrome_recursive("ANA", 0, len("ANA") - 1)',
                         setup=f"{expect}", number=10000000, repeat=5))

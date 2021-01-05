@@ -1,43 +1,37 @@
-from challenges.challenge_anagrams import is_anagram
 import timeit
-
-
-def test_validar_se_as_palavras_nao_sao_um_anagrama():
-    first_string = "pedra"
-    second_string = "perdaaa"
-    assert is_anagram(first_string, second_string) is False
-
-
-def test_validar_se_as_palavras_sao_um_anagrama():
-    first_string = "pedra"
-    second_string = "perda"
-    assert is_anagram(first_string, second_string) is True
-
-
-def test_validar_se_passar_primeira_palavra_em_branco_retorna_false():
-    first_string = ""
-    second_string = "perda"
-    assert is_anagram(first_string, second_string) is False
-
-
-def test_validar_se_passar_segunda_palavra_em_branco_retorna_false():
-    first_string = "pedra"
-    second_string = ""
-    assert is_anagram(first_string, second_string) is False
 
 
 def test_validar_tempo_anagrama():
     expect = ("from challenges.challenge_anagrams "
-              "import is_anagram")
-    print("printou o tempo de anagrama")
-    print(timeit.timeit('is_anagram("pedra", "pedro")',
-                        setup=f"{expect}"))
-    print(timeit.repeat('is_anagram("pedra", "pedro")',
-                        setup=f"{expect}", repeat=5))
-    print("printou o tempo de anagrama")
-    print("printou o tempo de anagrama com varias execucoes")
-    print(timeit.timeit('is_anagram("pedra", "pedro")',
-                        setup=f"{expect}", number=10000000))
-    print(timeit.repeat('is_anagram("pedra", "pedro")',
-                        setup=f"{expect}", number=10000000, repeat=5))
-    print("printou o tempo de anagrama com varias execucoes")
+              "import is_anagram_selectionSort, is_anagram_insertionSort, "
+              "is_anagram_bubbleSort, is_anagram_mergeSort, is_anagram_quickSort, "
+              "is_anagram_sort")
+    print("is_anagram_selectionSort")
+    teste = ("Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
+             "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+    teste2 = ("Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
+              "do sed eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+    print(timeit.timeit(f'is_anagram_selectionSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000)) 
+    print(timeit.repeat(f'is_anagram_selectionSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000, repeat=5)) 
+    print("is_anagram_insertionSort")
+    print(timeit.timeit(f'is_anagram_insertionSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000))
+    print(timeit.repeat(f'is_anagram_insertionSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000, repeat=5)) 
+    print("is_anagram_bubbleSort")
+    print(timeit.timeit(f'is_anagram_bubbleSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000))
+    print(timeit.repeat(f'is_anagram_bubbleSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000, repeat=5)) 
+    print("is_anagram_mergeSort")
+    print(timeit.timeit(f'is_anagram_mergeSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000))
+    print(timeit.repeat(f'is_anagram_mergeSort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000, repeat=5)) 
+    print("is_anagram_sort")
+    print(timeit.timeit(f'is_anagram_sort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000))
+    print(timeit.repeat(f'is_anagram_sort("{teste}", "{teste2}")',
+                        setup=f"{expect}", number=10000, repeat=5)) 

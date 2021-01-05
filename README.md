@@ -192,7 +192,9 @@ target_time = 1  # saída: 1, pois só o segundo estudante estudou no horário 1
 Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 ```
 
-- Limite de complexidade de tempo aceitável: `O(n)`;
+- Lembre que o limite de execução da função deve ser o menor tempo possível.
+
+* Dica sobre o tempo de execução é usar a complexidade: `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -211,6 +213,8 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 **[Será validado que `start_time` com valor vazio retorna 0]**
 
 **[Será validado que `target_time` com valor vazio retorna 0]**
+
+**[Será validado se tempo de execução da função é menor que 0.02]**
 
 #### 2 - Palíndromos (Recursividade)
 
@@ -286,8 +290,9 @@ first_string = "coxinha"
 second_string = "empada"
 # saída: False
 ```
+- Lembre que o limite de execução da função deve ser o menor tempo possível.
 
-- Limite de complexidade de tempo aceitável: `O(n log n)`;
+* Dica sobre o tempo de execução é usar a complexidade: `O(n log n)`;
 
 - Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
 
@@ -308,6 +313,8 @@ second_string = "empada"
 **[Será validado se passar a primeira palavra em branco o retorno da função e false]**
 
 **[Será validado se passar a segunda palavra em branco o retorno da função e false]**
+
+**[Será validado se tempo de execução da função é menor que 2]**
 
 ### Requisitos bônus:
 
@@ -337,7 +344,9 @@ nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 ```
 - Caso não passe nenhum valor ou uma string ou não houver números repetidos retorne false;
 
-- Limite de complexidade de tempo aceitável: `O(n log n)`;
+- Lembre que o limite de execução da função deve ser o menor tempo possível.
+
+* Dica sobre o tempo de execução é usar a complexidade: `O(n log n)`;
 
 - Faça o algoritmo aplicando busca binária e utilizando a solução iterativa;
 
@@ -367,11 +376,15 @@ _Dica:_ Ordene o array.
 
 **[Será validado se retorna false quando passa número negativo]**
 
+**[Será validado se tempo de execução da função é menor que 0.01]**
+
 #### 5 - Palíndromos (Iteratividade)
 
 Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-(Recursividade)), porém dessa vez utilizando a solução iterativa.
 
-- Limite de complexidade de tempo aceitável: `O(n)`;
+- Lembre que o limite de execução da função deve ser o menor tempo possível.
+
+* Dica sobre o tempo de execução é usar a complexidade: `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -384,6 +397,8 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 **[Será validado se não passar uma palavra iterativa irá retornar false]**
 
 **[Será validado se a palavra não é um palindromo iterativa irá retornar false]**
+
+**[Será validado se tempo de execução da função é menor que 0.005]**
 
 ### DURANTE O DESENVOLVIMENTO
 

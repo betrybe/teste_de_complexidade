@@ -32,8 +32,12 @@ def test_validar_tempo_anagrama():
     print("printou o tempo de anagrama")
     print(timeit.timeit('is_anagram("pedra", "pedro")',
                         setup=f"{expect}"))
+    print(timeit.repeat('is_anagram("pedra", "pedro")',
+                    setup=f"{expect}",repeat=5))
     print("printou o tempo de anagrama")
     print("printou o tempo de anagrama com varias execucoes")
     print(timeit.timeit('is_anagram("pedra", "pedro")',
                         setup=f"{expect}", number=10000000))
+    print(timeit.repeat('is_anagram("pedra", "pedro")',
+                    setup=f"{expect}", number=10000000, repeat=5))
     print("printou o tempo de anagrama com varias execucoes")

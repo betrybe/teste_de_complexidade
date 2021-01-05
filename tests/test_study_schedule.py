@@ -36,11 +36,10 @@ def test_validar_target_time_com_vazio():
     assert study_schedule(start_time, end_time, target_time) == 0
 
 
-def test_validar_tempo_busca():
-    expect = ("from challenges.challenge_study_schedule "
-              "import study_schedule")
+def test_validar_tempo_schedule():
+    setup_import = ("from challenges.challenge_study_schedule "
+                    "import study_schedule")
     start_time = [2, 1, 2, 1, 4, 4]
     end_time = [2, 2, 3, 5, 5, 5]
-    print("printou o tempo de busca")
     assert timeit.timeit(f'study_schedule({start_time}, {end_time}, 5)',
-                         setup=f"{expect}", number=10000) <= 0.02
+                         setup=f"{setup_import}", number=10000) <= 0.02

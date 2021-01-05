@@ -1,5 +1,4 @@
 from challenges.challenge_find_the_duplicate import find_duplicate
-
 import timeit
 
 
@@ -18,28 +17,32 @@ def test_validar_se_encontra_numeros_repetidos():
 
 def test_validar_se_retorna_false_quando_nao_envia_valores():
     nums = []
-    assert find_duplicate(nums) is False
+    find_duplicate(nums) is False
 
 
 def test_validar_se_retorna_false_quando_envia_string():
     nums = ['a', 'b']
-    assert find_duplicate(nums) is False
+    find_duplicate(nums) is False
 
 
 def test_validar_se_retorna_false_quando_nao_ha_repeticao():
     nums = [1, 2]
-    assert find_duplicate(nums) is False
+    find_duplicate(nums) is False
 
 
 def test_validar_se_retorna_false_quando_passa_um_numero():
     nums = [1]
-    assert find_duplicate(nums) is False
+    find_duplicate(nums) is False
+
+
+def test_validar_se_retorna_false_quando_passa_numero_negativo():
+    nums = [-1, -1]
+    find_duplicate(nums) is False
 
 
 def test_validar_tempo_duplicate():
-    expect = ("from challenges.challenge_find_the_duplicate "
-              "import find_duplicate")
+    setup_import = ("from challenges.challenge_find_the_duplicate "
+                    "import find_duplicate")
     nums = [1, 3, 4, 2, 2]
-    print("printou o tempo de duplicate")
     assert timeit.timeit(f'find_duplicate({nums})',
-                         setup=f"{expect}", number=10000) <= 0.01
+                         setup=f"{setup_import}", number=10000) <= 0.01

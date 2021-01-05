@@ -99,6 +99,26 @@
       "identifier": "test_validar_se_nao_passar_palavra_iterativa_retorna_false",
       "description": "Será validado se não passar uma palavra iterativa irá retornar false",
       "bonus": true
+    },
+    {
+      "identifier": "test_validar_tempo_anagrama",
+      "description": "Será validado se tempo de execução da função é menor que 2",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_tempo_duplicate",
+      "description": "Será validado se tempo de execução da função é menor que 0.01",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_tempo_iterative",
+      "description": "Será validado se tempo de execução da função é menor que 0.005",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_tempo_schedule",
+      "description": "Será validado se tempo de execução da função é menor que 0.2",
+      "bonus": false
     }
   ]
 }

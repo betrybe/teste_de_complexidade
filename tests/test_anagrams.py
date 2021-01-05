@@ -10,8 +10,6 @@ def test_validar_tempo_anagrama():
     teste2 = ("Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
               "do sed eiusmod tempor incididunt "
               "ut labore et dolore magna aliqua.")
-    print("is_anagram_sort")
-    print(timeit.timeit(f'is_anagram_sort("{teste}", "{teste2}")',
-                        setup=f"{expect}", number=10000))
+    print("printou o anagrama")
     assert timeit.timeit(f'is_anagram_sort("{teste}", "{teste2}")',
-                        setup=f"{expect}", number=10000)) <= 2
+                         setup=f"{expect}", number=10000) <= 2

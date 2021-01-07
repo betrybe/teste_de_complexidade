@@ -53,5 +53,3 @@ def test_validar_tempo_anagrama():
             number=10000,
         ))
     assert algorithms_correct and correct_time
-#8.074764391999999
-#8.060555237

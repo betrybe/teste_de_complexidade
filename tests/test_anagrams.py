@@ -47,9 +47,4 @@ def test_validar_tempo_anagrama():
         )
         <= 8.2
     )
-    print(timeit.timeit(
-            f'is_anagram("{first_string}", "{second_string}")',
-            setup=f"{setup_import}",
-            number=10000,
-        ))
     assert algorithms_correct and correct_time

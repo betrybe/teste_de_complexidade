@@ -52,4 +52,7 @@ def test_validar_tempo_duplicate():
         )
         <= 0.01
     )
+    print(timeit.timeit(
+            f"find_duplicate({nums})", setup=f"{setup_import}", number=10000
+        ))
     assert algorithms_correct and correct_time

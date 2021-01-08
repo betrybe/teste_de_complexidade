@@ -45,7 +45,7 @@ def test_validar_tempo_anagrama():
             setup=f"{setup_import}",
             number=10000,
         )
-        <= 2
+        <= 8.2
     )
     print(timeit.timeit(
             f'is_anagram("{first_string}", "{second_string}")',

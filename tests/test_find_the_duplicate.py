@@ -50,7 +50,7 @@ def test_validar_tempo_duplicate():
         timeit.timeit(
             f"find_duplicate({nums})", setup=f"{setup_import}", number=10000
         )
-        <= 0.1.2
+        <= 0.12
     )
     print(timeit.timeit(
         f"find_duplicate({nums})", setup=f"{setup_import}", number=10000

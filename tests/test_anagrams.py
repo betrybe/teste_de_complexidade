@@ -27,13 +27,24 @@ def test_validar_se_passar_segunda_palavra_em_branco_retorna_false():
 
 
 def test_validar_tempo_anagrama():
-    setup_import = ("from challenges.challenge_anagrams "
-                    "import is_anagram")
-    first_string = ("Lorem ipsum dolor sit amet, consectetur "
-                    "adipiscing elit, do sed eiusmod tempor "
-                    "incididunt ut labore et dolore magna aliqua.")
-    second_string = ("Lorem ipsum dolor sit amet, consectetur "
-                     "adipiscing elit, do sed eiusmod tempor "
-                     "incididunt ut labore et dolore magna aliqua.")
-    assert timeit.timeit(f'is_anagram("{first_string}", "{second_string}")',
-                         setup=f"{setup_import}", number=10000) <= 2
+    setup_import = "from challenges.challenge_anagrams " "import is_anagram"
+    first_string = (
+        "Lorem ipsum dolor sit amet, consectetur "
+        "adipiscing elit, do sed eiusmod tempor "
+        "incididunt ut labore et dolore magna aliqua."
+    )
+    second_string = (
+        "Lorem ipsum dolor sit amet, consectetur "
+        "adipiscing elit, do sed eiusmod tempor "
+        "incididunt ut labore et dolore magna aliqua."
+    )
+    algorithms_correct = is_anagram(first_string, second_string) is True
+    correct_time = (
+        timeit.timeit(
+            f'is_anagram("{first_string}", "{second_string}")',
+            setup=f"{setup_import}",
+            number=10000,
+        )
+        <= 8.2
+    )
+    assert algorithms_correct and correct_time

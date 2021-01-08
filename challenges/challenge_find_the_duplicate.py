@@ -45,6 +45,7 @@ def merge(left, right, merged):
 
     return merged
 
+
 def find_duplicate(nums):
     merge_sort(nums)
     for index in range(len(nums) - 1):
